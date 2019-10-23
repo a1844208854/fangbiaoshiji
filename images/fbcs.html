@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.top_r{
+			
+		}
+		.checkopen{
+			display: none;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+			<div class="top_r">1k1k1k1kk1</div>
+			<div class="top_r">2s2s2s2s2s</div>
+		</div>
+		<div class="top_r">3t3t3t3t3t3</div>
+		<div>
+			<div class="checkopen">111</div>
+			<div class="checkopen">222</div>
+			<div class="checkopen">333</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var top_rs=$(".top_r")
+			var checkopens=$(".checkopen")
+			
+			for(var i=0;i<top_rs.length;i++){
+				// var bool=true;
+				(function(j){
+					
+					var bool=true;
+						top_rs.eq(j).click(function(event) {
+						/* Act on the event */
+							if(bool){
+								checkopens.eq(j).show(400)
+								bool=!bool;
+								// console.log("zheng"+bool)
+							}else{
+								checkopens.eq(j).hide(400)
+								bool=!bool;
+								// console.log("fu"+bool)
+							}
+							
+						});
+						
+					
+					
+				})(i);
+			}
+			// (function(){
+
+			// })(i);
+			console.log(top_rs)
+		})
+		$("").click(function(event) {
+			/* Act on the event */
+		});
+	</script>
+</body>
+</html>
