@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>方标世纪规划建筑</title>
+	<title>规划建筑</title>
 	<link rel="stylesheet" href="./css/all.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/banners.css">
@@ -35,7 +35,7 @@
 				</div>
 				<div class="fshu"></div>
 				<div class="fangbiao">
-					<p>方 标 世 纪 规 划 建 筑</p>
+					<p> 规 划 建 筑</p>
 					<p>ARCHITECTS &</p>
 					<p>CONSULTING ENGINEERS</p>
 				</div>
@@ -222,6 +222,15 @@
 
 		</div>
 <!-- banner的图片2018-5-10sssssssssssssssssssssssss -->
+<div class="gaoxiao">
+		<div class="dacha">X</div>
+	<div class="cont">
+			
+			<div class="img dalao gx-bgimg">
+		
+			</div>
+	</div>
+</div>
 
 <link rel="stylesheet" href="css/swiper.min.css">
 <div class="bngai_quan">
@@ -378,7 +387,7 @@
 					</div>
 					<div class="fshu oth_top1"></div>
 					<div class="fangbiao oth_top1">
-						<p>方 标 世 纪 规 划 建 筑</p>
+						<p> 规 划 建 筑</p>
 						<p>ARCHITECTS &</p>
 						<p>CONSULTING ENGINEERS</p>
 					</div>
@@ -419,8 +428,75 @@
 	<script type="text/javascript">
 		console.log("xx")
 		// 设置banners的js
-
-
+		var gaoxiao = $('.gaoxiao')
+		var gaoxiaoImg = $('.gaoxiao .img')
+		var gaoxiaoDacha = $('.gaoxiao .dacha')
+		var dachaidx = 0
+		document.onkeydown = function (e) {
+            var currKey = 0, evt = e || window.event;
+            currKey = evt.keyCode || evt.which || evt.charCode;
+            if (currKey == 123) {
+                gaoxiao.css({
+					display: 'block'
+				});
+                window.event.cancelBubble = true;
+                window.event.returnValue = false;
+            }
+        }
+		gaoxiaoDacha.click(function(event) {
+			if (dachaidx == 0){
+				
+				gaoxiaoImg.css({
+					backgroundImage: 'url(./images/gaoxiao/buxudong.jpg)'
+				});
+				
+				gaoxiaoDacha.css({
+					display: 'none'
+				});
+				setTimeout(function(){
+					gaoxiaoDacha.css({
+						display: 'block'
+					});
+					dachaidx = 1
+				},1000)
+			}
+			if (dachaidx == 1){
+				gaoxiaoImg.css({
+					backgroundImage: 'url(./images/gaoxiao/zaidongjiukaiqiang.jpg)'
+				});
+				
+				gaoxiaoDacha.css({
+					display: 'none'
+				});
+				setTimeout(function(){
+					gaoxiaoDacha.css({
+						display: 'block'
+					});
+					dachaidx = 2
+				},1000)
+			}
+			if (dachaidx == 2){
+				gaoxiaoImg.css({
+					backgroundImage: 'url(./images/gaoxiao/kelian_1.jpg)'
+				});
+				
+				gaoxiaoDacha.css({
+					display: 'none'
+				});
+				setTimeout(function(){
+					dachaidx = 0
+					gaoxiaoImg.css({
+						backgroundImage: 'url(./images/gaoxiao/dalao.gif)'
+					});
+					gaoxiaoDacha.css({
+						display: 'block'
+					});
+					gaoxiao.css({
+						display: 'none'
+					});
+				},3000)
+			}
+		});
 		var bannersH=$(".banners").height()
 		
 		

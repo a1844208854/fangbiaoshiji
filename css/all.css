@@ -220,6 +220,52 @@ abbr, acronym {
 }
 
 
+.gaoxiao{
+	width: 100%;
+	height: 100%;
+	background-color: #cecece;
+	position: fixed;
+	z-index: 666;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.gaoxiao .dacha{
+	background-color: #8B4513;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	color: #F5F5DC;
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.gaoxiao .cont{
+	margin: auto;
+	margin-top: 100px;
+	width: 70%;
+	height: 70%;
+	position: relative;
+}
+.gaoxiao .cont .img{
+	width: 100%;
+	height: 100%;
+}
+.gaoxiao .cont .gx-bgimg{
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.gaoxiao .cont .dalao{
+	background-image: url(../images/gaoxiao/dalao.gif);
+	/* background-image: url(../images/gaoxiao/zaidongjiukaiqiang.jpg); */
+}
+.gaoxiao .cont{
+
+}
 
 @media screen and (max-width: 1200px) {
     
